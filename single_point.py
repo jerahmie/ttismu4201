@@ -51,7 +51,7 @@ def measure_current(conn: serial.Serial):
     
 if __name__ == '__main__':
     conn = serial.Serial(port='/dev/ttyACM0', baudrate=115200)
-    #print(scpi_send(conn, IDN))
+    #print(scpi_send(conn, smu.IDN))
     print(sense_current_terminals(conn))
     for vref in [3.]:
         set_source_voltage(conn, vref)
